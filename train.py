@@ -57,10 +57,10 @@ model.compile(loss='sparse_categorical_crossentropy',
               optimizer='adam',
               metrics=['accuracy'])
 
-
-os.environ['MLFLOW_TRACKING_USERNAME'] = 'renansantosmendes'
-os.environ['MLFLOW_TRACKING_PASSWORD'] = '6d730ef4a90b1caf28fbb01e5748f0874fda6077'
-mlflow.set_tracking_uri('https://dagshub.com/renansantosmendes/mlops-ead.mlflow')
+#
+os.environ['MLFLOW_TRACKING_USERNAME'] = 'ascle'
+os.environ['MLFLOW_TRACKING_PASSWORD'] = '4e7865ca4e100c3a50288fe551f551c83f08a298'
+mlflow.set_tracking_uri('https://dagshub.com/ascle/pos_mlops.mlflow')
 
 mlflow.tensorflow.autolog(log_models=True,
                           log_input_examples=True,
@@ -73,3 +73,4 @@ with mlflow.start_run(run_name='experiment_0mlops_ead') as run:
             epochs=50,
             validation_split=0.2,
             verbose=3)
+
